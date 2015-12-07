@@ -20,20 +20,16 @@ class PinsController < ApplicationController
 
       if @pin.save
         redirect_to @pin, notice: 'Pin was successfully created.' 
-        render :show, status: :created, location: @pin 
       else
         render :new 
-        render json: @pin.errors, status: :unprocessable_entity 
       end
   end
 
   def update
       if @pin.update(pin_params)
         redirect_to @pin, notice: 'Pin was successfully updated.' 
-        render :show, status: :ok, location: @pin 
       else
         render :edit 
-        render json: @pin.errors, status: :unprocessable_entity 
       end
   end
 
