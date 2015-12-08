@@ -40,6 +40,11 @@ GEM
     autoprefixer-rails (6.1.2)
       execjs
       json
+    aws-sdk (1.66.0)
+      aws-sdk-v1 (= 1.66.0)
+    aws-sdk-v1 (1.66.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -84,6 +89,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    masonry-rails (0.2.4)
+      railties
     mime-types (2.99)
     mimemagic (0.3.0)
     mini_portile2 (2.0.0)
@@ -176,11 +183,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk (< 2.0)
   bootstrap-sass
   coffee-rails (~> 4.1.0)
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  masonry-rails (~> 0.2.0)
   paperclip (~> 4.2)
   pg
   rails (= 4.2.5)
